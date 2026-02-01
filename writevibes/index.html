@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="as">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আমাৰ কবিৰ ৱেবছাইট - Assamese Author Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans Bengali', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://example.com/path/to/your-background-image.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #333;
+            line-height: 1.6;
+        }
+        nav {
+            background: linear-gradient(90deg, #2c3e50, #3498db);
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #f39c12;
+        }
+        .hero {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.2em;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        }
+        .section h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .section h2 i {
+            margin-right: 10px;
+        }
+        .preview {
+            display: block;
+        }
+        .full-content {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        button {
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background 0.3s, transform 0.2s;
+        }
+        button:hover {
+            background: linear-gradient(45deg, #2980b9, #1f5f99);
+            transform: scale(1.05);
+        }
+        .book-list {
+            list-style: none;
+            padding: 0;
+        }
+        .book-list li {
+            margin: 15px 0;
+            padding: 15px;
+            background: rgba(236, 240, 241, 0.9);
+            border-radius: 8px;
+            border-left: 5px solid #3498db;
+        }
+        footer {
+            background: linear-gradient(90deg, #2c3e50, #34495e);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        footer a {
+            color: #f39c12;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#hero">মুখ্য (Home)</a></li>
+            <li><a href="#poems">কবিতা</a></li>
+            <li><a href="#books">কিতাপ</a></li>
+            <li><a href="#about">মোৰ বিষয়ে</a></li>
+        </ul>
+    </nav>
+
+    <section id="hero" class="hero">
+        <h1>স্বাগতম কূলদ্বীপ ফুকনৰ ৱেবছাইটত</h1>
+        <p>স্মৃতি বোৰ কেতিয়াও মৰে নে?  
+        কিছুমান শব্দ, কিছুমান ক্ষণ—  
+        জীৱনৰ সৈতে চিৰকাল লিপ্ত হৈ থাকে।।</p>
+    </section>
+
+    <div class="container">
+        <!-- Poems Section -->
+        <div class="section" id="poems">
+            <h2><i class="fas fa-feather"></i> কবিতা (Poems)</h2>
+            <div class="preview">
+                <p>এখানে মোৰ কিছুমান কবিতাৰ নমুনা।</p>
+                <p><strong>মৃদুময় বতাহ:</strong> [মৃদুময় বতাহে নীৰৱ আকাশত....]</p>
+                <button onclick="toggleContent('poems-content')">আৰু পঢ়ক (Read More)</button>
+            </div>
+            <div class="full-content" id="poems-content">
+                <p><strong>মৃদুময় বতাহ:</strong> [
+মৃদুময় বতাহে নীৰৱ আকাশত তোলিছে এক উৎপিৰণ
+জিল যিল কৈ বলিছে ই সপোনৰ দিশে
+
+আকাশৰ সুৰ বাজিছে বতাহৰ কোমল স্পৰ্শে
+গছৰ পাতে নাচিছে হালি যালি সুৰে সুৰে
+
+প্রকৃতিৰ কথা কোৱা যেন ই এক নীৰৱ বন্ধু
+সপোনৰ কথা কয়, নিঃশব্দে, নিঃসঙ্কোচে।
+
+বতাহে জানে গন্তব্য স্থান নহয় সহজ
+তথাপিও চলি থাকে নিৰন্তৰ, নিৰূপায় 
+
+নদী,পাহাৰ,বন, আকাশ,মাটি 
+সকলোতে বতাহে বোৱাই সংগীতৰ জ্যোতি
+জীৱনৰ গান বাজে নিৰন্তৰ
+বতাহৰ বাণীত জীয়াই থাকে হৃদয়ৰ স্পন্দন
+— কূলদ্বীপ ফুকন
+
+4/11/2025]</p>
+                <p><strong>ৰাতিৰ পৃথিৱী:</strong> [ঘুমতি যাওঁতেই হেজাৰ চিন্তাই
+নিতৌ প্ৰশ্ন কৰেহি মোক ,
+সুধেহি বাৰে বাৰে আগন্তুক ভবিষ্যতৰ কথা ।
+
+কেতিয়াবা হাহোঁ সেই চিএ দেখি
+যেতিয়া দেউতাই গৌৰৱেৰে চিনাকি দিব তেওঁৰ পুত্ৰ বুলি,
+আশাৰে ভৰা পৃথিৱীখনত সপোন দেখো
+দিঠক কৰিব পাৰিম বুলি,
+
+মনত ভাবোঁ যিমান ত্যাগৰ প্ৰয়োজন নহওঁক
+কৰিম ত্যাগ হাহিঁ হাহিঁ,
+ল'ম প্ৰতিশোধ হিংসুকৰ পৰা
+নাশ কৰিম বিদ্বেহ ভাব
+এয়াই মোৰ নিজকে প্ৰতিশ্ৰুতি 
+
+ৰাতিৰ এই পৃথিৱীখন বহু পৃথক
+সকলোবোৰ সপোন কৰিম এদিন দিঠক
+ভবিষ্যতৰ কথা ভাবি ভাবি আজি মোৰ ক্লান্ত হৃদয়
+ঘুমতি যাওঁতেই হ'ল সূৰ্য্যৰ উদয়
+             - কুলদ্বীপ ফুকন
+             - 4/6/2024]</p>
+                </p><strong>মৰম সাগৰ :</strong> [মৰম নামৰ সাগৰ খনিত ডুব মাৰি চালো,
+দেখিলোঁ আছে তাত কত যে কাহিনী,
+খং অভিমান সকলো বৈ আছে হুটত,
+আগবাহি গৈছে ই চেনেহৰ দিশে ।
+
+সোমাজত উঠিছে এক মৰমৰ খলকনি,
+তাতে দেখিলোঁ মই তোমাৰ প্ৰতিচ্ছবি,
+হঠাৎ অনুভৱ কৰিলোঁ মই তোমাৰ আগমনী,
+স্পৰ্শ কৰিছা হি মোৰ ক্লান্ত হৃদয়ত,
+উফ..... কি কম এই অনুভূতি,
+যেন বুজাব নোৱাৰি ।
+
+- কূলদ্বীপ ফুকন
+
+9/12/2024]</p>
+            </p><strong>হ'বা নে লগৰী ?</strong> [এই এন্ধাৰ ৰাতি অকলশৰে মই 
+ভাবো তোমাৰ কথা
+তুমি জানো হবা মোৰ লগৰী ?
+এই চিন্তাই মোক নিতৌ কৰে প্ৰত্যাহ্বান 
+সঠিক উত্তৰ পাবকে নোৱাৰি
+
+সন্মতি দিলেই  আৰম্ভ হব এক নতুন কাহিনী
+যত থাকিব কেৱল সুখৰ বাতৰি
+দুয়োয়ে একেলগে যাম সপোনক নেওচি
+সজাতনে ৰাখিম তোমাক বুকুৰ মাজত
+হবা নে তুমি মোৰ লগৰী ?
+
+- কূলদ্বীপ ফুকন
+- 8/7/2025]</p>
+                <!-- Add more poems here -->
+            </div>
+        </div>
+
+        <!-- Books Section -->
+        <div class="section" id="books">
+            <h2><i class="fas fa-book"></i> কিতাপ (Books)</h2>
+            <div class="preview">
+                <p>মোৰ প্ৰকাশিত কিতাপসমূহ।</p>
+                <button onclick="toggleContent('books-content')">আৰু পঢ়ক (Read More)</button>
+            </div>
+            <div class="full-content" id="books-content">
+                <ul class="book-list">
+                    <li>
+                        <strong>কিতাপ ১: [হাৰ নহয় সংগ্ৰাম]</strong><br>
+                        <p>বিবৰণ: [এই কিতাপখন বৰ্তমান লিখি থকা হৈছে]।</p>
+                        <p>প্ৰকাশন বৰ্ষ: [২০২৬]।</p>
+                        <!-- Add image: <img src="images/book1.jpg" alt="Book Cover" width="100"> -->
+                    </li>
+                    <li>
+                        <strong>কিতাপ ২: [কিতাপৰ নাম]</strong><br>
+                        <p>বিবৰণ: [কিতাপৰ সংক্ষিপ্ত বিবৰণ]।</p>
+                        <p>প্ৰকাশন বৰ্ষ: [বৰ্ষ]।</p>
+                    </li>
+                    <!-- Add more books here -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- About Me Section -->
+        <div class="section" id="about">
+            <h2><i class="fas fa-user"></i> মোৰ বিষয়ে (About Me)</h2>
+            <div class="preview">
+                <p>মই এজন কবি আৰু লেখক।</p>
+                <button onclick="toggleContent('about-content')">আৰু পঢ়ক (Read More)</button>
+            </div>
+            <div class="full-content" id="about-content">
+                <p>মোৰ নাম কূলদ্বীপ ফুকন। মই বৰ্তমান ক্লাছ ৯ৰ ছাত্ৰ। মই এজন কবি আৰু লেখক হিচাপে কাম কৰি আছোঁ। মোৰ ৱাটছএপ/সংযোগ নম্বৰ হল 9707825607। আপুনি মোৰ ইনষ্টাগ্ৰামতো অনুসৰণ কৰিব পাৰে: <a href="https://www.instagram.com/_kuuuldeep.20_" target="_blank">_kuuuldeep.20_</a>। মোৰ লেখনি আৰু কবিতাৰ মাধ্যমেৰে মই মানুহৰ মনত প্ৰভাৱ পেলাব বিচাৰোঁ।</p>
+                <!-- Add more details if needed -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 কূলদ্বীপ ফুকন। সকলো অধিকাৰ সংৰক্ষিত।</p>
+        <p>
+            <a href="https://www.instagram.com/_kuuuldeep.20_" target="_blank"><i class="fab fa-instagram"></i> Instagram</a> |
+            <a href="https://wa.me/9707825607" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </p>
+    </footer>
+
+    <script>
+        function toggleContent(id) {
+            const element = document.getElementById(id);
+            if (element.style.display === "none" || element.style.display === "") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
